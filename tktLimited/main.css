@@ -1,0 +1,29 @@
+/* CSS Styles for "index.html" */
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px
+  float: right;
+  margin: 20px;
+}
+
+.title {
+  width: 100%;
+  /* position: absolute; */
+  background: #D21404;
+  height: 14%;
+  /* background-position: 20%; */
+  min-height: 10px;
+  /* min-width: 10px; */
+  text-align: center;
+  color: white;
+}
+  
+.text {
+  background-color: yellow;
+  color: red;
+  text-align: center;
+  border: 1px solid red;
+  margin: 20px;
+  padding: 20px;
+}
