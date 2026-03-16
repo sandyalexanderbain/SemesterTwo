@@ -15,17 +15,16 @@ h2, h3, p {
   text-align: center;
 }
 
-.aligned-text{
+.aligned-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
 
-.center-item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+img {
+  width: 100%;
+  height: auto;
 }
 
 .navbar {
@@ -34,10 +33,15 @@ h2, h3, p {
   display: flex;
   justify-content: center;
   gap: 5%;
-  width: 100%;
+  width: 100vw;
+  max-width: none;
   padding: 1% 1%;
   bottom: 0;
   position: fixed;
+  gap: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: calc(50% - 50vw);
 }
 
 /* Hyperlink colours */
@@ -66,13 +70,16 @@ h2, h3, p {
 }
 
 .index-title {
-  color: #000000;
+  color: #CCA43B;
+  background-color: #0b1117;
+  opacity: 90%;
+  border-radius: 10px;
   position: absolute;
-  top: 10%;
-  left: 65%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   /* TODO: Explain */
-  width: 22%;
+  width: 45%;
   height: auto;
   padding: 1% 1%;
   text-align: center;
@@ -81,6 +88,8 @@ h2, h3, p {
 .visit-title {
   color: #ffffff;
   background-color: #6fa8dc;
+  opacity: 90%;
+  border-radius: 10px;
   position: absolute;
   top: 60%;
   left: 30%;
@@ -92,25 +101,48 @@ h2, h3, p {
   text-align: center;
 }
 
-.text {
-  /* background-color: yellow; */
-  /* color: red; */
-  text-align: justify;
-  /* border: 1px solid red; */
-  /* margin: 20px; */
-  padding: 10px 10px;
+.history-title {
+  color: #ffffff;
+  background-color: #6fa8dc;
+  opacity: 90%;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  /* TODO: Explain */
+  width: 25%;
+  height: auto;
+  padding: 1% 1%;
+  text-align: center;
 }
 
+.spacing {
+  margin-bottom: 1.5rem;
+}
 
-img {
-  width: 100%;
-  height: auto;
+.box {
+  background-color: #cdcdcd;
+  border: 1px solid #000000;
+  min-height: 50px;
+  font-size: 2rem;
+}
+
+.text {
+  /* background-color: yellow; */
+  color: #E5E5E5;
+  text-align: justify;
+  font-size: 20px;
+  width: 75%;
+  /* margin: 20px; */
+  padding: 10px 10px;
+  margin: 0 auto;
 }
 
 .large-img {
   display: block;
   margin: auto;
-  width: 40%;
+  width: 90%;
   height: auto;
   border-radius: 2%;
 }
