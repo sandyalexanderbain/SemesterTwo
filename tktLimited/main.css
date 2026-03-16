@@ -6,41 +6,26 @@ html, body {
   padding: 0;
 }
 
-h2 {
+/* Compensate space used by navigation bar at the bottom of the page. */
+body {
+  padding-bottom: 10%;
+}
+
+h2, h3, p {
   text-align: center;
 }
 
-/* Hyperlink colours */
-a:link {
-  color: #6fa8dc;
-  background-color: #0b1117;
-  border: 1px solid #6fa8dc;
-  border-radius: 50px;
-  padding: 10px 10px;
-  text-decoration: none;
+.aligned-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
-a:visited {
-  color: #6fa8dc;
-  background-color: #0b1117;
-  border: 1px solid #6fa8dc;
-  border-radius: 50px;
-  padding: 10px 10px;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #ffffff;
-  background-color: #6fa8dc;
-  border: 1px solid #6fa8dc;
-  border-radius: 50px;
-  padding: 10px 10px;
-}
-
-img {
-  width: 100%;
-  height: auto;
-  /* float: right; */
+.center-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar {
@@ -54,19 +39,59 @@ img {
   bottom: 0;
   position: fixed;
 }
-.title {
+
+/* Hyperlink colours */
+.navA:link {
+  color: #6fa8dc;
+  background-color: #0b1117;
+  border: 1px solid #6fa8dc;
+  border-radius: 50px;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+.navA:visited {
+  color: #6fa8dc;
+  background-color: #0b1117;
+  border: 1px solid #6fa8dc;
+  border-radius: 50px;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+.navA:hover {
+  color: #ffffff;
+  background-color: #6fa8dc;
+  border: 1px solid #6fa8dc;
+  border-radius: 50px;
+  padding: 10px 10px;
+}
+
+.index-title {
   color: #000000;
   position: absolute;
   top: 10%;
   left: 65%;
   transform: translate(-50%, -50%);
   /* TODO: Explain */
-  width: 18%;
+  width: 22%;
   height: auto;
   padding: 1% 1%;
   text-align: center;
 }
   
+.visit-title {
+  color: #ffffff;
+  background-color: #6fa8dc;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  /* TODO: Explain */
+  width: 25%;
+  height: auto;
+  padding: 1% 1%;
+  text-align: center;
+}
+
 .text {
   /* background-color: yellow; */
   /* color: red; */
@@ -76,14 +101,25 @@ img {
   padding: 10px 10px;
 }
 
+
+img {
+  width: 100%;
+  height: auto;
+}
+
 .large-img {
   display: block;
   margin: auto;
-  width: 30%;
+  width: 40%;
   height: auto;
   border-radius: 2%;
 }
 
 .wrap-img {
   position: relative;
+}
+
+.crop-img {
+  object-fit: cover;
+  object-position: 50% 80%;
 }
