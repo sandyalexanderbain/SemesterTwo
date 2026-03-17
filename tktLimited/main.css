@@ -1,4 +1,5 @@
 /* CSS Styles for "index.html" */
+/* Set certain default tags and aspects of HTML to specific parameters for ease of organisation. */
 
 /* Set the html margin and padding default to 0, remove any prerequisites of html itself. */
 html, body {
@@ -15,6 +16,14 @@ h2, h3, p {
   text-align: center;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* Create classes that are used in specific tags that will be used multiple times. */
+/* Align text with multiple tags */
 .aligned-text {
   display: flex;
   flex-direction: column;
@@ -22,35 +31,31 @@ h2, h3, p {
   gap: 5px;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
+/* Class for navigation bar that will remain a fixed interactable element. */
 .navbar {
   background-color: #0b1117;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  gap: 5%;
-  width: 100vw;
-  max-width: none;
-  padding: 1% 1%;
-  bottom: 0;
   position: fixed;
+  width: 100vw;
+  padding: 1% 1%;
   gap: 1rem;
   left: 50%;
+  bottom: 0;
   transform: translateX(-50%);
   margin-left: calc(50% - 50vw);
 }
 
-/* Hyperlink colours */
+/* Class for hyperlink colours when unused, used and hovered over as
+ * interactions to let the user clearly understand what they are using.*/
 .navA:link {
   color: #6fa8dc;
   background-color: #0b1117;
   border: 1px solid #6fa8dc;
   border-radius: 50px;
   padding: 10px 10px;
+  /* Have no underline for the link. */
   text-decoration: none;
 }
 .navA:visited {
@@ -69,6 +74,7 @@ img {
   padding: 10px 10px;
 }
 
+
 .index-title {
   color: #CCA43B;
   background-color: #0b1117;
@@ -77,8 +83,8 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
+  /* Allow for center of the title precisely both vertically and horizontally. */
   transform: translate(-50%, -50%);
-  /* TODO: Explain */
   width: 45%;
   height: auto;
   padding: 1% 1%;
@@ -94,7 +100,6 @@ img {
   top: 60%;
   left: 30%;
   transform: translate(-50%, -50%);
-  /* TODO: Explain */
   width: 25%;
   height: auto;
   padding: 1% 1%;
@@ -110,7 +115,6 @@ img {
   top: 60%;
   left: 30%;
   transform: translate(-50%, -50%);
-  /* TODO: Explain */
   width: 25%;
   height: auto;
   padding: 1% 1%;
@@ -129,12 +133,10 @@ img {
 }
 
 .text {
-  /* background-color: yellow; */
   color: #E5E5E5;
   text-align: justify;
   font-size: 20px;
   width: 75%;
-  /* margin: 20px; */
   padding: 10px 10px;
   margin: 0 auto;
 }
