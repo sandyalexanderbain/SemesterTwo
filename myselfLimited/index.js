@@ -8,7 +8,7 @@ const server = app.listen(PORT, function () {
   console.log(`Listening on  ${PORT}`);
 
 });
-//
+
 // Static files
 app.use(express.static("public"));
 
@@ -36,7 +36,15 @@ io.on("connection", function (socket) {
   socket.on("disconnect", function () {
       activeUsers.delete(socket.username);
       io.emit("user disconnected", socket.username);
-    });
+    }); 
+
+  socket.on("typing", function () {
+    socket.broadcast.emit("typing", socket.username);
+  });
+
+  socket.on("stop typing", function () {
+    socket.broadcast.emit("stop typing", socket.username);
+  });
 
     socket.on("chat message", function (data) {
       io.emit("chat message", data);

@@ -12,14 +12,11 @@
     <nav class = "navbar">
       <a class = "navA" href="more.html">Learn more</a>
       <a class = "navA" href="extension.html">Chat w/others</a>
+    <p>Initial text</p>
     </nav>
       
-    <div class="position-relative mb-4"
-        style="margin-left: calc(-50vw + 50%);
-                margin-right: calc(-50vw + 50%);
-                border-radius: 0;
-                overflow: hidden;">
-
+    <div class="position-relative mb-4" style="border-radius: 0.5rem; overflow: hidden;">
+      <!-- Banner image — replace src with your own image path -->
       <img
         src="/images/wukautang.jpg"
         alt="My banner photo"
@@ -42,24 +39,21 @@
           Some Things About Me
         </h1>
         <p style="color: hsl(51, 37%, 80%); font-size: clamp(0.9rem, 2vw, 1.1rem); margin-top: 0.5rem;">
-          By Sandy Alexander Bain.
+          A small corner of the internet
         </p>
       </div>
     </div>
 
     <section class="mx-auto mb-5" style="max-width: 680px;">
       <p style="color: hsl(207, 72%, 83%); font-size: 1rem; line-height: 1.75; font-weight: 300;">
-        Now attending the University of Aberdeen, I study computer science... A subject I
-        did not expect to encounter or end up taking up as a full-time student.
-        
-        Born and raised in Hong Kong, I have two Scottish parents. Being ethnically Han
-        Chinese growing up with a incongruent culture from what most people expect, my
-        upbringing has been both peculiar and profound. My parents adopted me in 2007 at
-        11 months old.
-        <br><br>
-        I attended a local Hong Kong Chinese kindergarten and went to a local school for
-        the first year of primary at 6 years old. As the school culture differed heavily
-        from the cutlural norms and hopes of my parents, I got moved to another school.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <p style="color: hsl(51, 37%, 80%); font-size: 1rem; line-height: 1.75; margin-top: 1rem; font-weight: 300;">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
       </p>
     </section>
 

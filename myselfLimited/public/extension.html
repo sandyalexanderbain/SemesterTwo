@@ -27,7 +27,7 @@
       button,
       .message_form__button {
         padding: 10px 20px;
-        background: #4caf50;
+        background: hsl(122, 39%, 49%);
         color: white;
         border: none;
         cursor: pointer;
@@ -36,12 +36,12 @@
 
       button:hover,
       .message_form__button:hover {
-        background: #45a049;
+        background: hsl(123, 40%, 45%);
       }
 
       .messages__history {
         margin-bottom: 20px;
-        border: 1px solid #ddd;
+        border: 1px solid hsl(0, 0%, 87%);
         padding: 10px;
         height: 400px;
         overflow-y: auto;
@@ -49,7 +49,7 @@
 
       .message-item {
         padding: 8px 16px;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid hsl(0, 0%, 93%);
       }
 
       .message-item:last-child {
@@ -57,7 +57,7 @@
       }
 
       .system-message {
-        color: #666;
+        color: hsl(0, 0%, 40%);
         font-style: italic;
         font-size: 0.9em;
       }
@@ -72,9 +72,10 @@
       }
     </style>
   </head>
-  <body class="container" style="background-color: #242F40;">
+
+  <body class="container" style="background-color: hsl(198, 78%, 5%);">
     <nav class="navbar">
-      <a class="navA" href="index.html">BACK</a>
+      <a class="navA" href="index.html">Return to home page.</a>
     </nav>
 
     <div id="username-container">
@@ -88,6 +89,8 @@
       </div>
       <div class="messaging__area">
         <div class="messages__history"></div>
+        <div id="typing-indicator" 
+          style="color: hsl(0, %0, %87); font-style: italic; min-height: 20px; padding: 4px 0;"></div>
         <form class="message_form">
           <input 
             type="text" 
