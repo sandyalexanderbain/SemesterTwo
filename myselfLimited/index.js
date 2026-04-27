@@ -19,9 +19,11 @@ const io = socket(server);
 const activeUsers = new Set();
 
 
+// Will handle the interactions and messages of a single user. Runs each time a new user joins.
 io.on("connection", function (socket) {
   console.log("Made socket connection");
 
+  // Default user name.
   socket.username = "Anonymous";
 
   socket.on("new user", function (data) {
@@ -30,14 +32,18 @@ io.on("connection", function (socket) {
     activeUsers.delete(oldUsername);
     activeUsers.add(socket.username);
     //... is the the spread operator, adds to the set while retaining what was in there already
+    io.emit("user joined", socket.username);
     io.emit("new user", [...activeUsers]);
   });
 
+  // Takes place when a user disconnects.
   socket.on("disconnect", function () {
       activeUsers.delete(socket.username);
       io.emit("user disconnected", socket.username);
+      io.emit("user left", socket.username);
     }); 
 
+  // When typing occurs, this fires to show and display typing.
   socket.on("typing", function () {
     socket.broadcast.emit("typing", socket.username);
   });
