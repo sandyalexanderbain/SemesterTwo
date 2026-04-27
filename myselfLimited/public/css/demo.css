@@ -8,6 +8,7 @@ html, body {
   padding: 0;
 }
 
+/* Import ark pixel font for visible uniqueness in html pages. */
 @font-face {
   font-family: 'ArkPixel';
   src: url('/fonts/ark-pixel-12px-proportional-latin.woff2') format('woff2');
@@ -82,6 +83,13 @@ img {
   border: 1px solid hsl(0, 100%, 27%);
   border-radius: 50px;
   padding: 10px 10px;
+}
+
+.carousel-item img {
+  height: 700px;
+  object-fit: cover;
+  object-position: center; 
+  width: 100%;
 }
 
 .text {
